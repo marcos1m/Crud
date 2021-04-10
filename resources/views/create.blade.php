@@ -17,7 +17,7 @@
             <form name="formEdit" id="formEdit" method="post" action="{{url("books/$book->id")}}">
                 @method('PUT')
         @else
-            <form name="formCad" id="formCad" method="post" action="{{url('books')}}">
+            <form name="formCad" id="formCad" method="post" action="{{route('books.post.insert')}}">
         @endif
                 @csrf
                 <input class="form-control" type="text" name="title" id="title" placeholder="Título:" value="{{$book->title ?? ''}}" required><br>
